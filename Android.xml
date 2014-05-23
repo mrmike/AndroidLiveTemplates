@@ -13,7 +13,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="click" value="@OnClick($VIEW$)&#10;void on$NAME$Click {&#10;}" description="Add onClick method for ButterKnife" toReformat="false" toShortenFQNames="true">
+  <template name="click" value="@OnClick(R.id.$VIEW$)&#10;void on$NAME$Click() {&#10;    $END$&#10;}" description="Add onClick method for ButterKnife" toReformat="false" toShortenFQNames="true">
     <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -26,8 +26,8 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="view" value="@InjectView($VIEW$)&#10;$TYPE$ $NAME$" description="Inject View with ButterKnife" toReformat="false" toShortenFQNames="true">
-    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="view" value="@InjectView(R.id.$VIEW$)&#10;$TYPE$ $NAME$" description="Inject View with ButterKnife" toReformat="false" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="View" alwaysStopAt="true" />
     <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -53,7 +53,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="profile" value="final long start = System.currentTimeMillis();&#10;Log.d(&quot;profiling&quot;, &quot;[$methodName$]:&quot; + (System.currentTimeMillis() - start));&#10;" description="Add log for measuring execution time" toReformat="false" toShortenFQNames="true">
+  <template name="profile" value="final long start = System.currentTimeMillis();&#10;$END$&#10;Log.d(&quot;profiling&quot;, &quot;[$methodName$]:&quot; + (System.currentTimeMillis() - start));&#10;" description="Add log for measuring execution time" toReformat="false" toShortenFQNames="true">
     <variable name="methodName" expression="methodName()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
