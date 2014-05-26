@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="Android">
-  <template name="ld" value="Log.d(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send message to debug" toReformat="false" toShortenFQNames="true">
+  <template name="ld" value="android.util.Log.d(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a DEBUG log message." toReformat="false" toShortenFQNames="true">
     <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -53,7 +53,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="profile" value="final long start = System.currentTimeMillis();&#10;$END$&#10;Log.d(&quot;profiling&quot;, &quot;[$methodName$]:&quot; + (System.currentTimeMillis() - start));&#10;" description="Add log for measuring execution time" toReformat="false" toShortenFQNames="true">
+  <template name="profile" value="final long start = System.currentTimeMillis();&#10;$END$&#10;android.util.Log.d(&quot;profiling&quot;, &quot;[$methodName$]:&quot; + (System.currentTimeMillis() - start));&#10;" description="Add log for measuring execution time" toReformat="false" toShortenFQNames="true">
     <variable name="methodName" expression="methodName()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -64,6 +64,78 @@
       <option name="JAVA_STRING" value="true" />
       <option name="COMPLETION" value="true" />
     </context>
+  </template>
+  <template name="inflate" value="android.view.LayoutInflater inflater = LayoutInflater.from($context$);&#10;android.view.View view = inflater.inflate(R.layout.$layout$, $parent$, $attach$);" description="Create layoutInflater and inflate view" toReformat="false" toShortenFQNames="true">
+    <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="layout" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="attach" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="le" value="android.util.Log.e(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a ERROR log message." toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="lv" value="android.util.Log.v(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a VERBOSE log message." toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="lw" value="android.util.Log.w(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a WARN log message." toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="li" value="android.util.Log.i(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="Send a INFO log message." toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="wtf" value="android.util.Log.wtf(&quot;$TAG$&quot;, &quot;$MSG$&quot;);" description="What a Terrible Failure: Report an exception that should never happen." toReformat="false" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
 </templateSet>
 

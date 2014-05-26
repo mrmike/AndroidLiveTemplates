@@ -30,10 +30,31 @@ During code editing type one of the template name and press tab.
 
 ### Templates list
 
-* ld - log debug message
+* ld - Send a DEBUG log message.
 ```
 Log.d("$TAG$", "$MSG$");
 ```
+* le - Send a ERROR log message.
+```
+Log.e("$TAG$", "$MSG$");
+```
+* li - Send a INFO log message.
+```
+Log.i("$TAG$", "$MSG$");
+```
+* lw - Send a WARN log message.
+```
+Log.w("$TAG$", "$MSG$");
+```
+* lv - Send a VERBOSE log message.
+```
+Log.v("$TAG$", "$MSG$");
+```
+* wtf - What a Terrible Failure: Report an exception that should never happen.
+```
+Log.wtf("$TAG$", "$MSG$");
+```
+
 * toast - show toast
 ```
 Toast.makeText($context$, $msg$, Toast.LENGTH_SHORT).show();
