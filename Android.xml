@@ -26,9 +26,8 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="view" value="@InjectView(R.id.$VIEW$)&#10;$TYPE$ $NAME$" description="Inject View with ButterKnife" toReformat="false" toShortenFQNames="true">
+  <template name="view" value="@InjectView(R.id.$VIEW$)&#10;View $NAME$" description="Inject View with ButterKnife" toReformat="false" toShortenFQNames="true">
     <variable name="VIEW" expression="" defaultValue="View" alwaysStopAt="true" />
-    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -40,7 +39,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="toast" value="Toast.makeText($context$, $msg$, Toast.LENGTH_SHORT).show();" description="show toast" toReformat="false" toShortenFQNames="true">
+  <template name="toast" value="android.widget.Toast.makeText($context$, $msg$, Toast.LENGTH_SHORT).show();" description="show toast" toReformat="false" toShortenFQNames="true">
     <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="msg" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -136,6 +135,28 @@
     <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="MSG" expression="" defaultValue="" alwaysStopAt="true" />
     <context />
+  </template>
+  <template name="tools" value="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" description="Add tools namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="android" value="xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;" description="Add android namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ttext" value="tools:text=&quot;$Text$&quot;" description="Add tools:text attribute" toReformat="false" toShortenFQNames="true">
+    <variable name="Text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
   </template>
 </templateSet>
 

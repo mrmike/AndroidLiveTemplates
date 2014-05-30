@@ -77,3 +77,15 @@ void on$NAME$Click() {
     $END$
 }
 ```
+* android - Add android namespace (**XML**)
+```
+xmlns:android="http://schemas.android.com/apk/res/android"
+```
+* tools - Add tools namespace (**XML**)
+```
+xmlns:tools="http://schemas.android.com/tools"
+```
+* ttext - Add tools:text attribute
+```
+tools:text="$text$"
+```
