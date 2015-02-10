@@ -5,7 +5,12 @@ Live Templates set for Android Studio / Intellij IDEA.
 
 ## Installation
 
-Android.xml file should be placed in the following location:
+To get template file you can use `wget`:
+```
+wget https://raw.githubusercontent.com/mrmike/AndroidLiveTemplates/master/Android.xml
+```
+
+And then copy `Android.xml` file to one of the locations:
 
 ###**Windows:** 
 ```
