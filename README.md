@@ -94,3 +94,23 @@ xmlns:tools="http://schemas.android.com/tools"
 ```
 tools:text="$text$"
 ```
+
+* ps - Create private static final String field.
+```
+private static final String $NAME$ = "$VALUE$";
+```
+
+* pi - Create private static final int field.
+```
+private static final int $NAME$ = $VALUE$;
+```
+
+* pf - Create private static final float field.
+```
+private static final float $NAME$ = $VALUE$;
+```
+
+* pd - Create private static final double field.
+```
+private static final double $NAME$ = $VALUE$;
+```
